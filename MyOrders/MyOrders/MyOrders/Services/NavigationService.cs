@@ -47,9 +47,13 @@ namespace MyOrders.Services
         {
             switch (pageName)
             {
+                case "MainPage":
+                    App.Current.MainPage = new MainPage();
+                    break;
                 case "MasterPage":
                     App.Current.MainPage = new MasterPage();
                     break;
+
                 default:
                     break;
             }

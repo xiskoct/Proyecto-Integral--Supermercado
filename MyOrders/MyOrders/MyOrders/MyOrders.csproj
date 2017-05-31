@@ -39,7 +39,10 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\InstanceLocator.cs" />
-    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\Cesta.cs" />
+    <Compile Include="Models\Clientes.cs" />
+    <Compile Include="Models\Pedidos.cs" />
+    <Compile Include="Models\Productos.cs" />
     <Compile Include="Pages\AlarmsPage.xaml.cs">
       <DependentUpon>AlarmsPage.xaml</DependentUpon>
     </Compile>
@@ -70,7 +73,7 @@
     <Compile Include="Services\NavigationService.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\MenuItemViewModel.cs" />
-    <Compile Include="ViewModels\OrderViewModel.cs" />
+    <Compile Include="ViewModels\ProductosViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="GalaSoft.MvvmLight, Version=5.3.0.19026, Culture=neutral, PublicKeyToken=e7570ab207bcb616, processorArchitecture=MSIL">

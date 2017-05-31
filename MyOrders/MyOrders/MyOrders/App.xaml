@@ -36,8 +36,9 @@
         <Setter Property="TextColor"
                 Value="White"></Setter>
       </Style>
-      <!--DataTemplates-->
-      <DataTemplate x:Key="OrderItemTemplate">
+      
+      <!--DataTemplates Lista de datos del Main Page-->
+      <DataTemplate x:Key="ProductosItemTemplate">
         <ViewCell>
           <Grid Padding="8">
             <Grid.ColumnDefinitions>
@@ -52,11 +53,11 @@
                 FontAttributes="Bold"
                 VerticalOptions="Center"
                 TextColor="{StaticResource FontColor}"
-                Text="{Binding Title}"></Label>
+                Text="{Binding nombre}"></Label>
               <Label
                 VerticalOptions="Center"
                 TextColor="{StaticResource FontColor}"
-                Text="{Binding Description}"></Label>
+                Text="{Binding descripcion}"></Label>
               <Label
                 VerticalOptions="Center"
                 TextColor="{StaticResource MainColor}"
@@ -65,6 +66,7 @@
           </Grid>
         </ViewCell>
       </DataTemplate>
+      
       <!--Locator-->
       <infra:InstanceLocator x:Key="Locator"></infra:InstanceLocator>
     </ResourceDictionary>

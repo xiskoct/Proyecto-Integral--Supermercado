@@ -6,8 +6,8 @@
              Title="Mis Pedidos"
              BindingContext="{Binding Main, Source={StaticResource Locator}}">
   <ListView
-    ItemTemplate="{StaticResource OrderItemTemplate}"
-    ItemsSource="{Binding Orders}"
+    ItemTemplate="{StaticResource ProductosItemTemplate}"
+    ItemsSource="{Binding Productos}"
     HasUnevenRows="True">
   </ListView>
   <ContentPage.ToolbarItems>
