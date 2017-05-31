@@ -8,9 +8,9 @@ using Android.Widget;
 using Android.OS;
 using Android.Graphics.Drawables;
 
-namespace MyOrders.Droid
+namespace Supermercado.Droid
 {
-    [Activity(Label = "MyOrders", Icon = "@drawable/ic_launcher",
+    [Activity(Label = "Supermercado", Icon = "@drawable/ic_launcher",
         Theme = "@android:style/Theme.Material.Light.DarkActionBar",
         MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity

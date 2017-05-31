@@ -7,8 +7,8 @@
     <ProjectGuid>{345F2E87-1B09-4AD6-B048-79A415E08633}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MyOrders.WinPhone</RootNamespace>
-    <AssemblyName>MyOrders.WinPhone</AssemblyName>
+    <RootNamespace>Supermercado.WinPhone</RootNamespace>
+    <AssemblyName>Supermercado.WinPhone</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformVersion>8.1</TargetPlatformVersion>
     <MinimumVisualStudioVersion>12</MinimumVisualStudioVersion>
@@ -113,8 +113,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MyOrders\MyOrders.csproj">
-      <Name>MyOrders</Name>
+    <ProjectReference Include="..\MyOrders\Supermercado.csproj">
+      <Name>Supermercado</Name>
+      <Project>{F2B59D3A-3203-410E-8421-A3640DA02DD9}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

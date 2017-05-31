@@ -8,8 +8,8 @@
     <ProjectGuid>{F2B59D3A-3203-410E-8421-A3640DA02DD9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MyOrders</RootNamespace>
-    <AssemblyName>MyOrders</AssemblyName>
+    <RootNamespace>Supermercado</RootNamespace>
+    <AssemblyName>Supermercado</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>

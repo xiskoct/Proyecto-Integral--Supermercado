@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyOrders.Models
+namespace Supermercado.Models
 {
     public class Productos
     {

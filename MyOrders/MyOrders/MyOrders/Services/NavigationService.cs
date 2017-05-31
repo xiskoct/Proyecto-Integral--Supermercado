@@ -1,4 +1,4 @@
-﻿using MyOrders.Pages;
+﻿using Supermercado.Pages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace MyOrders.Services
+namespace Supermercado.Services
 {
     public class NavigationService
     {

@@ -1,19 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyOrders.Droid", "MyOrders\MyOrders.Droid\MyOrders.Droid.csproj", "{8F67D63C-FA36-40C0-8AF3-65233BDB4E38}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Supermercado.Droid", "MyOrders\MyOrders.Droid\Supermercado.Droid.csproj", "{8F67D63C-FA36-40C0-8AF3-65233BDB4E38}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyOrders.iOS", "MyOrders\MyOrders.iOS\MyOrders.iOS.csproj", "{91974F77-7460-47F4-AB33-B9A853729B5C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Supermercado.iOS", "MyOrders\MyOrders.iOS\Supermercado.iOS.csproj", "{91974F77-7460-47F4-AB33-B9A853729B5C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyOrders.WinPhone", "MyOrders\MyOrders.WinPhone\MyOrders.WinPhone.csproj", "{345F2E87-1B09-4AD6-B048-79A415E08633}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Supermercado.WinPhone", "MyOrders\MyOrders.WinPhone\Supermercado.WinPhone.csproj", "{345F2E87-1B09-4AD6-B048-79A415E08633}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyOrders.UWP", "MyOrders\MyOrders.UWP\MyOrders.UWP.csproj", "{2C255AD0-9E8B-4D25-965B-BBAF8D6A2B23}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Supermercado.UWP", "MyOrders\MyOrders.UWP\Supermercado.UWP.csproj", "{2C255AD0-9E8B-4D25-965B-BBAF8D6A2B23}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyOrders.Windows", "MyOrders\MyOrders.Windows\MyOrders.Windows.csproj", "{DB7EB612-1555-412C-B3BD-4E35B1CCE629}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Supermercado.Windows", "MyOrders\MyOrders.Windows\Supermercado.Windows.csproj", "{DB7EB612-1555-412C-B3BD-4E35B1CCE629}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyOrders", "MyOrders\MyOrders\MyOrders.csproj", "{F2B59D3A-3203-410E-8421-A3640DA02DD9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Supermercado", "MyOrders\MyOrders\Supermercado.csproj", "{F2B59D3A-3203-410E-8421-A3640DA02DD9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace MyOrders.iOS
+namespace Supermercado.iOS
 {
     public class Application
     {

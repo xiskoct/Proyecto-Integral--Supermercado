@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 
-namespace MyOrders.Pages
+namespace Supermercado.Pages
 {
     public partial class AlarmsPage : ContentPage
     {

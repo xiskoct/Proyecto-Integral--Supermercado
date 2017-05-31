@@ -1,4 +1,4 @@
-﻿using MyOrders.Models;
+﻿using Supermercado.Models;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyOrders.Services
+namespace Supermercado.Services
 {
     public class ApiService
     {

@@ -1,11 +1,11 @@
-﻿using MyOrders.ViewModels;
+﻿using Supermercado.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyOrders.Infrastructure
+namespace Supermercado.Infrastructure
 {
     public class InstanceLocator
     {

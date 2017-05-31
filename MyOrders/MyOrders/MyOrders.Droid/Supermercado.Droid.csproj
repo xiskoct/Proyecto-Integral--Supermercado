@@ -9,8 +9,8 @@
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MyOrders.Droid</RootNamespace>
-    <AssemblyName>MyOrders.Droid</AssemblyName>
+    <RootNamespace>Supermercado.Droid</RootNamespace>
+    <AssemblyName>Supermercado.Droid</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <AndroidApplication>true</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
@@ -131,8 +131,9 @@
     <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MyOrders\MyOrders.csproj">
-      <Name>MyOrders</Name>
+    <ProjectReference Include="..\MyOrders\Supermercado.csproj">
+      <Name>Supermercado</Name>
+      <Project>{F2B59D3A-3203-410E-8421-A3640DA02DD9}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

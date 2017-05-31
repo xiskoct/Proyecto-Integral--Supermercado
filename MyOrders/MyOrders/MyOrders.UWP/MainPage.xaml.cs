@@ -13,7 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-namespace MyOrders.UWP
+namespace Supermercado.UWP
 {
     public sealed partial class MainPage
     {
@@ -21,7 +21,7 @@ namespace MyOrders.UWP
         {
             this.InitializeComponent();
 
-            LoadApplication(new MyOrders.App());
+            LoadApplication(new Supermercado.App());
         }
     }
 }

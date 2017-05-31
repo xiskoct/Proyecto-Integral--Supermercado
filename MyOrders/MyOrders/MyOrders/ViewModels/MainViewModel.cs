@@ -1,6 +1,6 @@
 ﻿using GalaSoft.MvvmLight.Command;
-using MyOrders.Pages;
-using MyOrders.Services;
+using Supermercado.Pages;
+using Supermercado.Services;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace MyOrders.ViewModels
+namespace Supermercado.ViewModels
 {
     public class MainViewModel
     {

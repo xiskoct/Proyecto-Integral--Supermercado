@@ -7,8 +7,8 @@
     <ProjectGuid>{2C255AD0-9E8B-4D25-965B-BBAF8D6A2B23}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MyOrders.UWP</RootNamespace>
-    <AssemblyName>MyOrders.UWP</AssemblyName>
+    <RootNamespace>Supermercado.UWP</RootNamespace>
+    <AssemblyName>Supermercado.UWP</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion>10.0.10586.0</TargetPlatformVersion>
@@ -128,8 +128,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MyOrders\MyOrders.csproj">
-      <Name>MyOrders</Name>
+    <ProjectReference Include="..\MyOrders\Supermercado.csproj">
+      <Name>Supermercado</Name>
+      <Project>{F2B59D3A-3203-410E-8421-A3640DA02DD9}</Project>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
