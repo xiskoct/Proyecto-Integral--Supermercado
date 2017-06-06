@@ -21,7 +21,7 @@ namespace Supermercado.Services
                 client.DefaultRequestHeaders.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 client.DefaultRequestHeaders.AcceptEncoding.Add(new StringWithQualityHeaderValue("utf-8"));
-                
+                   
 
                 //Procesado peticion get en JSON
                 string url = "http://melocomo.digitalpower.es/v1/productos";

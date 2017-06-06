@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Supermercado.Pages.ClientesPage"
+             BackgroundColor="{StaticResource BackgroundColor}"
+             Title="Nuevo Cliente"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}">
+
+  <ScrollView BindingContext="{Binding NewClient}">
+    <StackLayout Padding="8">
+      
+      <Label TextColor="{StaticResource FontColor}"
+             Text="Nombre"></Label>
+      <Entry TextColor="{StaticResource FontColor}"
+             Text="{Binding Title, Mode=TwoWay}"
+             BackgroundColor="White"></Entry>
+      
+      <Label TextColor="{StaticResource FontColor}"
+             Text="Email"></Label>
+      <Entry TextColor="{StaticResource FontColor}"
+             Text="{Binding Client, Mode=TwoWay}"
+             BackgroundColor="White"></Entry>
+      
+      <Label TextColor="{StaticResource FontColor}"
+             Text="Direccion"></Label>
+      <Editor TextColor="{StaticResource FontColor}"
+              HeightRequest="100"
+              Text="{Binding Description, Mode=TwoWay}"
+              BackgroundColor="White"></Editor>
+      
+      <Label TextColor="{StaticResource FontColor}"
+             Text="dni"></Label>
+      <Editor TextColor="{StaticResource FontColor}"
+              Text="{Binding DeliveryInformation, Mode=TwoWay}"
+              HeightRequest="100"
+              BackgroundColor="White"></Editor>
+      
+     
+      <Button Command="{Binding SaveCommand}"
+        Text="Guardar"></Button>
+    </StackLayout>
+  </ScrollView>
+</ContentPage>

@@ -18,11 +18,11 @@ namespace Supermercado.Services
                 case "NewOrderPage":
                     await Navigate(new NewOrderPage());
                     break;
-                case "AlarmsPage":
+                case "CestaPage":
                     await Navigate(new AlarmsPage());
                     break;
                 case "ClientsPage":
-                    await Navigate(new ClientsPage());
+                    await Navigate(new ClientesPage());
                     break;
                 case "SettingsPage":
                     await Navigate(new SettingsPage());

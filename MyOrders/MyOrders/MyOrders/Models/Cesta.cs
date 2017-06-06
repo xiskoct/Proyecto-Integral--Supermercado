@@ -8,9 +8,10 @@ namespace Supermercado.Models
 {
     class Cesta
     {
-        public string idCesta { get; set; }
-
-        public string cantidad { get; set; }
-        public string precio { get; set; }
+        public int idLineaPedido { get; set; }
+        public int idPedido { get; set; }
+        public int idProducto { get; set; }
+        public int cantidad { get; set; }
+        public double precio { get; set; }
     }
 }

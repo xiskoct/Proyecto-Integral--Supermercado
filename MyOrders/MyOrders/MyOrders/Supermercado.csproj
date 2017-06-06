@@ -43,11 +43,11 @@
     <Compile Include="Models\Clientes.cs" />
     <Compile Include="Models\Pedidos.cs" />
     <Compile Include="Models\Productos.cs" />
-    <Compile Include="Pages\AlarmsPage.xaml.cs">
-      <DependentUpon>AlarmsPage.xaml</DependentUpon>
+    <Compile Include="Pages\AlarmPage.xaml.cs">
+      <DependentUpon>AlarmPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\ClientsPage.xaml.cs">
-      <DependentUpon>ClientsPage.xaml</DependentUpon>
+    <Compile Include="Pages\ClientesPage.xaml.cs">
+      <DependentUpon>ClientesPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -73,6 +73,7 @@
     <Compile Include="Services\NavigationService.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\MenuItemViewModel.cs" />
+    <Compile Include="ViewModels\ClientesViewModel.cs" />
     <Compile Include="ViewModels\ProductosViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -140,13 +141,13 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Pages\ClientsPage.xaml">
+    <EmbeddedResource Include="Pages\ClientesPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Pages\AlarmsPage.xaml">
+    <EmbeddedResource Include="Pages\AlarmPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
