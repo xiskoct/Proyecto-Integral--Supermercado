@@ -21,6 +21,8 @@ namespace Supermercado.ViewModels
         //Miembros que son llamados desde los binding, en este caso desde MainPage
         public ObservableCollection<MenuItemViewModel> Menu { get; set; }
         public ObservableCollection<ProductosViewModel> Productos { get; set; }
+        public ObservableCollection<ClientesViewModel> Clientes { get; set; }
+
 
         #endregion
 
@@ -29,8 +31,12 @@ namespace Supermercado.ViewModels
             navigationService = new NavigationService();
             apiService = new ApiService();
 
-            //Creo lista de productos
+            //Creo lista temporal de productos
             Productos = new ObservableCollection<ProductosViewModel>();
+
+           //Creo lista temporal de Clientes
+            Clientes = new ObservableCollection<ClientesViewModel>();
+
 
             LoadMenu();
             //LoadProductos();
@@ -59,8 +65,22 @@ namespace Supermercado.ViewModels
         private async void Start()
         //Se inicializa desde el bindin de WelcomePage
         {
-            //Obtengo la lista de los productos desde la API
-            var listaproductos = await apiService.GetAllProductos();
+
+            //Chequeo User y Password.
+            /*var listaclientes = await apiService.GetAllClientes();
+            foreach (var clientes in listaclientes)
+            {
+                if(clientes.nombre == "admin")
+                {
+
+                }
+            }
+
+                */
+
+
+                //Obtengo la lista de los productos desde la API
+                var listaproductos = await apiService.GetAllProductos();
             //Limpio datos dinamicos del ObservableCOllection
             Productos.Clear();
             //Recorre la lista y llena la ObservableCollection Orders
@@ -109,15 +129,15 @@ namespace Supermercado.ViewModels
             Menu.Add(new MenuItemViewModel()
             {
                 Icon = "ic_action_alarm",
-                Title = "Alarmas",
-                PageName = "AlarmsPage"
+                Title = "Cesta",
+                PageName = "CestaPage"
             });
 
             Menu.Add(new MenuItemViewModel()
             {
                 Icon = "ic_action_settings",
-                Title = "Ajustes",
-                PageName = "SettingsPage"
+                Title = "Pedidos",
+                PageName = "PedidosPage"
             });
         }
 

@@ -4,12 +4,14 @@
              x:Class="Supermercado.Pages.MainPage"
              BackgroundColor="{StaticResource BackgroundColor}"
              Title="Mis Productos"
-             BindingContext="{Binding Main, Source={StaticResource Locator}}">
+            BindingContext="{Binding Main, Source={StaticResource Locator}}">
+  
   <ListView
     ItemTemplate="{StaticResource ProductosItemTemplate}"
     ItemsSource="{Binding Productos}"
     HasUnevenRows="True">
   </ListView>
+  
   <ContentPage.ToolbarItems>
     <ToolbarItem Icon="ic_action_add.png" Command="{Binding GoToCommand}" CommandParameter="NewOrderPage">
     </ToolbarItem>

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Supermercado.Models
 {
-    class Clientes
+    public class Clientes
     {
         public int idCliente { get; set; }
         public string nombre { get; set; }

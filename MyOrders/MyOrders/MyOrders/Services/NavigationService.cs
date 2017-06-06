@@ -19,13 +19,13 @@ namespace Supermercado.Services
                     await Navigate(new NewOrderPage());
                     break;
                 case "CestaPage":
-                    await Navigate(new AlarmsPage());
+                    await Navigate(new CestaPage());
                     break;
                 case "ClientsPage":
                     await Navigate(new ClientesPage());
                     break;
-                case "SettingsPage":
-                    await Navigate(new SettingsPage());
+                case "PedidosPage":
+                    await Navigate(new PedidosPage());
                     break;
                 case "MainPage":
                     await App.Navigator.PopToRootAsync();

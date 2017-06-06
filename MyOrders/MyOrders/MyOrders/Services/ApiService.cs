@@ -38,6 +38,34 @@ namespace Supermercado.Services
             }
         }
 
+        public async Task<List<Clientes>> GetAllClientes()
+        {
+            using (HttpClient client = new HttpClient())
+            {
+                //Cabeceras
+
+                client.DefaultRequestHeaders.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                client.DefaultRequestHeaders.AcceptEncoding.Add(new StringWithQualityHeaderValue("utf-8"));
+
+
+                //Procesado peticion get en JSON
+                string url = "http://melocomo.digitalpower.es/v1/clientes/login";
+                var result = await client.GetAsync(url); //GET
+
+                string data = await result.Content.ReadAsStringAsync(); //DATA
+
+                if (result.IsSuccessStatusCode)
+                {
+                    return JsonConvert.DeserializeObject<List<Clientes>>(data);
+                }
+                else
+                    return new List<Clientes>();
+            }
+        }
+
+
+
         public async Task<Productos> CreatePedidos(Productos newPedidos)
         {
             using (HttpClient client = new HttpClient())

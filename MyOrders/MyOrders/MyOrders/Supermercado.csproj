@@ -61,8 +61,8 @@
     <Compile Include="Pages\NewOrderPage.xaml.cs">
       <DependentUpon>NewOrderPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\SettingsPage.xaml.cs">
-      <DependentUpon>SettingsPage.xaml</DependentUpon>
+    <Compile Include="Pages\PedidosPage.xaml.cs">
+      <DependentUpon>PedidosPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\WelcomePage.xaml.cs">
       <DependentUpon>WelcomePage.xaml</DependentUpon>
@@ -153,7 +153,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Pages\SettingsPage.xaml">
+    <EmbeddedResource Include="Pages\PedidosPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

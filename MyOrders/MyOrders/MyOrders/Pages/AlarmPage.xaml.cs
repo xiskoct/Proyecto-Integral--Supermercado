@@ -8,9 +8,9 @@ using Xamarin.Forms;
 
 namespace Supermercado.Pages
 {
-    public partial class AlarmsPage : ContentPage
+    public partial class CestaPage : ContentPage
     {
-        public AlarmsPage()
+        public CestaPage()
         {
             InitializeComponent();
         }
