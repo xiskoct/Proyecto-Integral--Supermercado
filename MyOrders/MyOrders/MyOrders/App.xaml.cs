@@ -17,7 +17,7 @@ namespace Supermercado
         {
             InitializeComponent();
             // The root page of your application
-            MainPage = new WelcomePage();
+            MainPage = new LoginPage();
         }
 
         protected override void OnStart()
