@@ -12,8 +12,17 @@ namespace Supermercado.Infrastructure
         public InstanceLocator()
         {
             Main = new MainViewModel();
+            //ProductosVM = new ProductosViewModel();
+            //ClientesVM = new ClientesViewModel();
+
         }
 
         public MainViewModel Main { get; set; }
+        //public ProductosViewModel ProductosVM { get; set; }
+
+
+        //public ClientesViewModel ClientesVM { get; set; }
+
+
     }
 }

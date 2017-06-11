@@ -5,14 +5,28 @@
              BackgroundColor="{StaticResource MainColor}"
              Title="Mis Pedidos"
              BindingContext="{Binding Main, Source={StaticResource Locator}}">
-  <StackLayout 
+  
+  <ScrollView>
+  <StackLayout
     VerticalOptions="Center"
     HorizontalOptions="Center"
     Spacing="20">
     <Label 
       TextColor="White"
       FontSize="20"
-      Text="Bienvenid@s"></Label>
+      Text="Bienvenidos a su supermercado online"></Label>
+    
+    <Label TextColor="{StaticResource FontColor}"
+             Text=""></Label>
+    <Entry TextColor="{StaticResource FontColor}"
+           Text="{Binding user, Mode=TwoWay}"
+           BackgroundColor="White"></Entry>
+    <Label TextColor="{StaticResource FontColor}"
+             Text="Título"></Label>
+    <Entry TextColor="{StaticResource FontColor}"
+           Text="{Binding pass, Mode=TwoWay}"
+           BackgroundColor="White"></Entry>
+    
     <Button 
       Command="{Binding StartCommand}"
       HeightRequest="40"
@@ -21,4 +35,6 @@
       TextColor="{StaticResource MainColor}"
       Text="Iniciar"></Button>
   </StackLayout>
+  </ScrollView>
+
 </ContentPage>

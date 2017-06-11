@@ -9,11 +9,12 @@
   <ListView
     ItemTemplate="{StaticResource ProductosItemTemplate}"
     ItemsSource="{Binding Productos}"
+    SelectedItem="{Binding objItemSelected, Mode=TwoWay}"
     HasUnevenRows="True">
   </ListView>
   
   <ContentPage.ToolbarItems>
-    <ToolbarItem Icon="ic_action_add.png" Command="{Binding GoToCommand}" CommandParameter="NewOrderPage">
+    <ToolbarItem Icon="ic_action_add.png" Command="{Binding GoToCommand}" CommandParameter="AddProductoCesta">
     </ToolbarItem>
   </ContentPage.ToolbarItems>
 </ContentPage>

@@ -7,6 +7,8 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
+using Java.IO;
+using Android.OS;
 
 namespace Supermercado.Services
 {
@@ -17,11 +19,11 @@ namespace Supermercado.Services
             using (HttpClient client = new HttpClient())
             {
                 //Cabeceras
-                
+
                 client.DefaultRequestHeaders.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 client.DefaultRequestHeaders.AcceptEncoding.Add(new StringWithQualityHeaderValue("utf-8"));
-                   
+
 
                 //Procesado peticion get en JSON
                 string url = "http://melocomo.digitalpower.es/v1/productos";
@@ -38,54 +40,51 @@ namespace Supermercado.Services
             }
         }
 
-        public async Task<List<Clientes>> GetAllClientes()
+
+        public async Task<List<Clientes>> checkAuth(string user, string password)
         {
-            using (HttpClient client = new HttpClient())
+            using (var client = new HttpClient())
             {
-                //Cabeceras
+                //Convierto en array y serializo
+                var jsonRequest = new { email = user, password = password };
 
-                client.DefaultRequestHeaders.Clear();
-                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                client.DefaultRequestHeaders.AcceptEncoding.Add(new StringWithQualityHeaderValue("utf-8"));
+                var serializedJsonRequest = JsonConvert.SerializeObject(jsonRequest);
 
+                string apiurl = "http://melocomo.digitalpower.es/v1/clientes/login";
+                HttpContent content = new StringContent(serializedJsonRequest, Encoding.UTF8, "application/json");
+               
 
-                //Procesado peticion get en JSON
-                string url = "http://melocomo.digitalpower.es/v1/clientes/login";
-                var result = await client.GetAsync(url); //GET
-
-                string data = await result.Content.ReadAsStringAsync(); //DATA
-
-                if (result.IsSuccessStatusCode)
-                {
-                    return JsonConvert.DeserializeObject<List<Clientes>>(data);
-                }
-                else
-                    return new List<Clientes>();
-            }
-        }
-
-
-
-        public async Task<Productos> CreatePedidos(Productos newPedidos)
-        {
-            using (HttpClient client = new HttpClient())
-            {
-                string url = "http://ninjatips.azurewebsites.net/tables/Orders";
-                //client.DefaultRequestHeaders.Add("ZUMO-API-VERSION", "2.0.0");
-
-                string content = JsonConvert.SerializeObject(newPedidos);
-                StringContent body = new StringContent(content, Encoding.UTF8, "application/json");
-                var result = await client.PostAsync(url, body);
+                var result = await client.PostAsync(apiurl, content);
 
                 string data = await result.Content.ReadAsStringAsync();
 
                 if (result.IsSuccessStatusCode)
-                {
-                    return JsonConvert.DeserializeObject<Productos>(data);
+                {                    
+                    return  JsonConvert.DeserializeObject<List<Clientes>>(data);
+                
                 }
                 else
-                    return null;
+                    return new List<Clientes>();
+
             }
         }
+        
+    
+
+                 
+                
+            
+      
+
+        public static byte[] convertStringtoByteArray(string userName, string userPassword)
+        {
+            var byteArray = Encoding.UTF8.GetBytes(userName + ":" + userPassword);
+            return byteArray;
+        }
+
     }
 }
+
+       
+  
+

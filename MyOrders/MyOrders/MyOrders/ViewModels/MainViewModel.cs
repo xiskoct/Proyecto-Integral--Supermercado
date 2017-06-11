@@ -18,9 +18,34 @@ namespace Supermercado.ViewModels
 
         #region Properties
 
+
+        //Properties de ViewModel 
+        private string _user;
+        private string _pass;
+
+
+        public string user
+        {
+            get { return _user; }
+            set { _user = value; }
+        }
+        public string pass
+        {
+            get { return _pass; }
+            set { _pass = value; }
+        }
+ 
+
+        public ProductosViewModel productosvm { get; set; }
+        public ClientesViewModel clientesvm { get; set; }
+
+
+
         //Miembros que son llamados desde los binding, en este caso desde MainPage
         public ObservableCollection<MenuItemViewModel> Menu { get; set; }
         public ObservableCollection<ProductosViewModel> Productos { get; set; }
+        public ObservableCollection<ProductosViewModel> Productos { get; set; }
+
         public ObservableCollection<ClientesViewModel> Clientes { get; set; }
 
 
@@ -34,7 +59,7 @@ namespace Supermercado.ViewModels
             //Creo lista temporal de productos
             Productos = new ObservableCollection<ProductosViewModel>();
 
-           //Creo lista temporal de Clientes
+            //Creo lista temporal de Clientes
             Clientes = new ObservableCollection<ClientesViewModel>();
 
 
@@ -42,18 +67,32 @@ namespace Supermercado.ViewModels
             //LoadProductos();
         }
 
-       
+
 
         #region Commands
-        
-          public ICommand GoToCommand
+
+        public ICommand GoToCommand
         {
             get { return new RelayCommand<string>(GoTo); }
         }
-        
+
         private void GoTo(string pageName)
         {
-         
+            // Minuto 31 del video
+            switch (pageName)
+            {
+
+                case "AddProductoCesta":
+                    productosvm = new ProductosViewModel();
+                    break;
+                case "NewOrderPage":
+                    productosvm = new ProductosViewModel();
+                    break;
+                default:
+                    break;
+
+            }
+
             navigationService.Navigate(pageName);
         }
 
@@ -61,6 +100,7 @@ namespace Supermercado.ViewModels
         {
             get { return new RelayCommand(Start); }
         }
+
 
         private async void Start()
         //Se inicializa desde el bindin de WelcomePage
@@ -78,28 +118,46 @@ namespace Supermercado.ViewModels
 
                 */
 
+            //
+            //Instancio Atributo
+            //clientesvm = new ClientesViewModel();
+            //Chequeo Usuario
+
+
+            /*
+            string passw = clientesvm.password;
+            var datoscliente = apiService.checkuser(user,passw);
+            */
+
+            //Obtenglo datos del cliente enviados por POST
+            var datoscliente = await apiService.checkAuth(_user,_pass);
+          
+
 
                 //Obtengo la lista de los productos desde la API
                 var listaproductos = await apiService.GetAllProductos();
-            //Limpio datos dinamicos del ObservableCOllection
-            Productos.Clear();
-            //Recorre la lista y llena la ObservableCollection Orders
-            foreach (var producto in listaproductos)
-            {
-                Productos.Add(new ProductosViewModel()
+
+                //Limpio datos dinamicos del ObservableCOllection
+                Productos.Clear();
+                //Recorre la lista y llena la ObservableCollection Orders
+                foreach (var producto in listaproductos)
                 {
-                    //Asignas a las ViewModel lo deserializado del JSON a través de los Models
-                    nombre = producto.nombre, //ViewModel=Models
-                    descripcion = producto.descripcion,
-                    precio = producto.precio,
-                });
+                    Productos.Add(new ProductosViewModel()
+                    {
+                        //Asignas a las ViewModel lo deserializado del JSON a través de los Models
+                        nombre = producto.nombre, //ViewModel=Models
+                        descripcion = producto.descripcion,
+                        precio = producto.precio,
+                    });
+                }
+
+
+                //navigationService.SetMainPage("MainPage");
+                navigationService.SetMainPage("MasterPage");
+
             }
-            
-
-            //navigationService.SetMainPage("MainPage");
-            navigationService.SetMainPage("MasterPage");
-
-        }
+        
+        
 
         #endregion
 

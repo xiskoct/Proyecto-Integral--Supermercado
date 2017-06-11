@@ -32,27 +32,28 @@ namespace Supermercado.ViewModels
         public bool IsDelivered { get; set; }
         public DateTime MinimumDate { get; private set; }
 
-        
+        /*
           public ICommand SaveCommand
         {
             get { return new RelayCommand(Save); }
         }
 
         
+      /*
         private async void Save()
         {
             try
             {
                 await apiService.CreatePedidos(new Productos()
-                { /*
+                { 
                     idProducto = Guid.NewGuid().ToString(),
                     nombre = this.Title,
                     descripcion = this.Client,
                     precio = this.DeliveryDate,
                     imagen = this.DeliveryInformation,
-                    categoria = this.Description,*/
+                    categoria = this.Description,
                 });
-
+  
                 await dialogService.ShowMessage("El pedido ha sido creado.", "Información");
             }
             catch 
@@ -61,5 +62,7 @@ namespace Supermercado.ViewModels
             }
         }
         
-    }
+    */
+}
+
 }

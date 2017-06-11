@@ -5,7 +5,7 @@
              BackgroundColor="{StaticResource BackgroundColor}"
              Title="Nuevo Pedido"
              BindingContext="{Binding Main, Source={StaticResource Locator}}">
-  
+  you
   <ScrollView BindingContext="{Binding NewOrder}">
     <StackLayout Padding="8">
       <Label TextColor="{StaticResource FontColor}" 

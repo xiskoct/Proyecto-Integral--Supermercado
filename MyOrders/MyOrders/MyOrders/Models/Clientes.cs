@@ -13,17 +13,17 @@ namespace Supermercado.Models
         public string email { get; set; }
         public string direccion { get; set; }
         public string poblacion { get; set; }
-        public string cp { get; set; }
+        public string CP { get; set; }
         public string provincia { get; set; }
         public string pais { get; set; }
         public string DNI { get; set; }
         public string fec_alta { get; set; }
         public string password { get; set; }
-        public string claveAPI { get; set; }
+        public string claveApi { get; set; }
 
 
 
-
+  
 
     }
 }

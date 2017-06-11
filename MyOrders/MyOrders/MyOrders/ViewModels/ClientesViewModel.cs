@@ -21,7 +21,17 @@ namespace Supermercado.ViewModels
             dialogService = new DialogService();
             DeliveryDate = DateTime.Today;
         }
+
+        //Para login
+        public string user { get; set; }
+
+        public string password { get; set; }
+
+
+
         public int idCliente { get; set; }
+        
+
         public string nombre { get; set; }
         public string email { get; set; }
         public string direccion { get; set; }
@@ -31,7 +41,6 @@ namespace Supermercado.ViewModels
         public string pais { get; set; }
         public string DNI { get; set; }
         public string fec_alta { get; set; }
-        public string password { get; set; }
         public string claveAPI { get; set; }
 
 
@@ -41,25 +50,25 @@ namespace Supermercado.ViewModels
         public bool IsDelivered { get; set; }
         public DateTime MinimumDate { get; private set; }
 
-        
+        /*
           public ICommand SaveCommand
         {
             get { return new RelayCommand(Save); }
         }
 
-        
+        /*
         private async void Save()
         {
             try
             {
                 await apiService.CreatePedidos(new Productos()
-                { /*
+                { 
                     idProducto = Guid.NewGuid().ToString(),
                     nombre = this.Title,
                     descripcion = this.Client,
                     precio = this.DeliveryDate,
                     imagen = this.DeliveryInformation,
-                    categoria = this.Description,*/
+                    categoria = this.Description,
                 });
 
                 await dialogService.ShowMessage("El pedido ha sido creado.", "Información");
@@ -69,6 +78,6 @@ namespace Supermercado.ViewModels
                 await dialogService.ShowMessage("Ha ocuarrido un error inesperado.", "Error");
             }
         }
-        
+        */
     }
 }
