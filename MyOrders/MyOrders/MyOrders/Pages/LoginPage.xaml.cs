@@ -15,12 +15,12 @@ namespace Supermercado
 		private async void loginButton_Clicked (object sender, EventArgs e){
 
 			if(string.IsNullOrEmpty(emailEntry.Text)){
-				await DisplayAlert("Error","Debe ingresar un email","Aceptar");
+				await DisplayAlert("Error","Email no puede estar vacio","Aceptar");
 				emailEntry.Focus();
 				return;
 			}
 			if(string.IsNullOrEmpty(passwordEntry.Text)){
-				await DisplayAlert("Error","Debe ingresar un email","Aceptar");
+				await DisplayAlert("Error","Debes introducir una contraseña","Aceptar");
 				passwordEntry.Focus();
 				return;
 			}
