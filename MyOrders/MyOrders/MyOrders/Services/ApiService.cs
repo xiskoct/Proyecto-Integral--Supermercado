@@ -40,7 +40,7 @@ namespace Supermercado.Services
             }
         }
 
-
+    
         public async Task<List<Clientes>> checkAuth(string user, string password)
         {
             using (var client = new HttpClient())
@@ -68,13 +68,40 @@ namespace Supermercado.Services
 
             }
         }
-        
-    
 
-                 
+        /*
+        public async Task<List<Clientes>> CreatePedidos()
+        {
+            using (var client = new HttpClient())
+            {
+                //Convierto en array y serializo
+                var jsonRequest = new { email = user, password = password };
+
+                var serializedJsonRequest = JsonConvert.SerializeObject(jsonRequest);
                 
-            
-      
+                string apiurl = "http://melocomo.digitalpower.es/v1/clientes/login";
+                HttpContent content = new StringContent(serializedJsonRequest, Encoding.UTF8, "application/json");
+
+
+                var result = await client.PostAsync(apiurl, content);
+
+                string data = await result.Content.ReadAsStringAsync();
+
+                if (result.IsSuccessStatusCode)
+                {
+                    return JsonConvert.DeserializeObject<List<Clientes>>(data);
+
+                }
+                else
+                    return new List<Clientes>();
+
+            }
+        }
+
+    */
+
+
+
 
         public static byte[] convertStringtoByteArray(string userName, string userPassword)
         {

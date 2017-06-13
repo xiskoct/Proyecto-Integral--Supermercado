@@ -41,10 +41,11 @@ namespace Supermercado.ViewModels
 
 
 
+
         //Miembros que son llamados desde los binding, en este caso desde MainPage
         public ObservableCollection<MenuItemViewModel> Menu { get; set; }
         public ObservableCollection<ProductosViewModel> Productos { get; set; }
-        public ObservableCollection<ProductosViewModel> Productos { get; set; }
+        public ObservableCollection<CestaViewModel> Cesta { get; set; }
 
         public ObservableCollection<ClientesViewModel> Clientes { get; set; }
 
@@ -82,7 +83,7 @@ namespace Supermercado.ViewModels
             switch (pageName)
             {
 
-                case "AddProductoCesta":
+                case "CestaPage":
                     productosvm = new ProductosViewModel();
                     break;
                 case "NewOrderPage":

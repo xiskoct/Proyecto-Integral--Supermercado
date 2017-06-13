@@ -14,7 +14,7 @@
   </ListView>
   
   <ContentPage.ToolbarItems>
-    <ToolbarItem Icon="ic_action_add.png" Command="{Binding GoToCommand}" CommandParameter="AddProductoCesta">
+    <ToolbarItem Icon="ic_action_add.png" Command="{Binding GoToCommand}" CommandParameter="CestaPage">
     </ToolbarItem>
   </ContentPage.ToolbarItems>
 </ContentPage>
