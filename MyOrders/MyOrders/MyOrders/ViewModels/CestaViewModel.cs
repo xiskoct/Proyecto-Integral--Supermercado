@@ -16,28 +16,27 @@ namespace Supermercado.ViewModels
         public int idProducto { get; set; }
         public int cantidad { get; set; }
         public double precio { get; set; }
-    }
-}
 
 
-        /*
-        public ICommand AddProductoCesta
+
+
+        public ICommand SaveProductoCesta
         {
-            get { return new RelayCommand(SaveProductoCesta); }
+            get { return new RelayCommand(AddProductoCesta); }
         }
 
-        
-        private async void SaveProductoCesta()
-        {
+
+        private async void AddProductoCesta()
+        {/*
             try
             {
                 await ApiService.CreateCesta(new Cesta()
                 {
-                idLineaPedido = this.idLineaPedido,
-                idPedido = this.idPedido,
-                idProducto = this.idProducto,
-                cantidad = this.cantidad,
-                precio = this.precio,
+                    idLineaPedido = this.idLineaPedido,
+                    idPedido = this.idPedido,
+                    idProducto = this.idProducto,
+                    cantidad = this.cantidad,
+                    precio = this.precio,
                 });
 
                 //await dialogService.ShowMessage("El pedido ha sido creado.", "Información");
@@ -47,8 +46,9 @@ namespace Supermercado.ViewModels
             {
                 //await dialogService.ShowMessage("Ha ocuarrido un error inesperado.", "Error");
             }
+            */
         }
     }
+}
 
  
-}*/

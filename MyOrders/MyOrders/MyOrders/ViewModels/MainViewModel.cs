@@ -38,7 +38,7 @@ namespace Supermercado.ViewModels
 
         public ProductosViewModel productosvm { get; set; }
         public ClientesViewModel clientesvm { get; set; }
-
+        public CestaViewModel cestavm { get; set; }
 
 
 
@@ -84,7 +84,7 @@ namespace Supermercado.ViewModels
             {
 
                 case "CestaPage":
-                    productosvm = new ProductosViewModel();
+                    cestavm = new CestaViewModel();
                     break;
                 case "NewOrderPage":
                     productosvm = new ProductosViewModel();
