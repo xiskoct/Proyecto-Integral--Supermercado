@@ -34,15 +34,15 @@ namespace Supermercado.ViewModels
             get { return _pass; }
             set { _pass = value; }
         }
- 
 
+        //Instanciar los ViewModel desde los binding context de las vistas
         public ProductosViewModel productosvm { get; set; }
         public ClientesViewModel clientesvm { get; set; }
         public CestaViewModel cestavm { get; set; }
 
 
 
-        //Miembros que son llamados desde los binding, en este caso desde MainPage
+        //Miembros que son llamados para listar los itemdata source desde los binding.
         public ObservableCollection<MenuItemViewModel> Menu { get; set; }
         public ObservableCollection<ProductosViewModel> Productos { get; set; }
         public ObservableCollection<CestaViewModel> Cesta { get; set; }
@@ -59,8 +59,6 @@ namespace Supermercado.ViewModels
 
             //Creo lista temporal de productos
             Productos = new ObservableCollection<ProductosViewModel>();
-
-            //Creo lista temporal de Clientes
             Clientes = new ObservableCollection<ClientesViewModel>();
 
 
@@ -79,7 +77,7 @@ namespace Supermercado.ViewModels
 
         private void GoTo(string pageName)
         {
-            // Minuto 31 del video
+            // Vamos a averiguar desde que pagina viene la solicitud, para realizar acciones previas
             switch (pageName)
             {
 
@@ -102,41 +100,25 @@ namespace Supermercado.ViewModels
             get { return new RelayCommand(Start); }
         }
 
+        private void objItemSelected()
+        {
+            navigationService.Navigate("ProductosPage");
+        }
+
+   
+       
+
+
 
         private async void Start()
         //Se inicializa desde el bindin de WelcomePage
         {
 
-            //Chequeo User y Password.
-            /*var listaclientes = await apiService.GetAllClientes();
-            foreach (var clientes in listaclientes)
-            {
-                if(clientes.nombre == "admin")
-                {
-
-                }
-            }
-
-                */
-
-            //
-            //Instancio Atributo
-            //clientesvm = new ClientesViewModel();
-            //Chequeo Usuario
-
-
-            /*
-            string passw = clientesvm.password;
-            var datoscliente = apiService.checkuser(user,passw);
-            */
-
             //Obtenglo datos del cliente enviados por POST
             var datoscliente = await apiService.checkAuth(_user,_pass);
-          
 
-
-                //Obtengo la lista de los productos desde la API
-                var listaproductos = await apiService.GetAllProductos();
+            //Obtengo la lista de los productos desde la API
+            var listaproductos = await apiService.GetAllProductos();
 
                 //Limpio datos dinamicos del ObservableCOllection
                 Productos.Clear();
@@ -167,10 +149,8 @@ namespace Supermercado.ViewModels
         private void LoadMenu()
         {
             //Creo Lista de Menu
-
             Menu = new ObservableCollection<MenuItemViewModel>();
 
-            //Relleno Menu Estaticamente
             Menu.Add(new MenuItemViewModel()
             {
                 Icon = "ic_action_orders",

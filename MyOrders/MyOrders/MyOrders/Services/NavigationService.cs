@@ -28,9 +28,13 @@ namespace Supermercado.Services
                 case "PedidosPage":
                     await Navigate(new PedidosPage());
                     break;
+                case "ProductosPage":
+                    await Navigate(new ProductosPage());
+                    break;
                 case "MainPage":
                     await App.Navigator.PopToRootAsync();
                     break;
+                
                 default:
                     break;
             }

@@ -37,35 +37,7 @@
                 Value="White"></Setter>
       </Style>
       
-      <!--DataTemplates Lista de datos del Main Page-->
-      <DataTemplate x:Key="ProductosItemTemplate">
-        <ViewCell>
-          <Grid Padding="8">
-            <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="Auto"></ColumnDefinition>
-              <ColumnDefinition Width="*"></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <Image
-              WidthRequest="50" HeightRequest="50" VerticalOptions="Start"
-              Source="icon.png"></Image>
-            <StackLayout Grid.Column="1">
-              <Label
-                FontAttributes="Bold"
-                VerticalOptions="Center"
-                TextColor="{StaticResource FontColor}"
-                Text="{Binding nombre}"></Label>
-              <Label
-                VerticalOptions="Center"
-                TextColor="{StaticResource FontColor}"
-                Text="{Binding descripcion}"></Label>
-              <Label
-                VerticalOptions="Center"
-                TextColor="{StaticResource MainColor}"
-                Text="{Binding DeliveryDate, StringFormat='{0:yyyy/MM/dd}'}"></Label>
-            </StackLayout>
-          </Grid>
-        </ViewCell>
-      </DataTemplate>
+
       
       <!--Locator-->
       <infra:InstanceLocator x:Key="Locator"></infra:InstanceLocator>
