@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Supermercado.Pages.ClientesPage"
              BackgroundColor="{StaticResource BackgroundColor}"
-             Title="Nuevo Cliente"
+             Title="Datos del Cliente"
              BindingContext="{Binding Main, Source={StaticResource Locator}}">
 
   <ScrollView BindingContext="{Binding NewClient}">
@@ -16,20 +16,20 @@
              BackgroundColor="White"></Entry>
       
       <Label TextColor="{StaticResource FontColor}"
-             Text="Email"></Label>
+             Text="Direccion"></Label>
       <Entry TextColor="{StaticResource FontColor}"
              Text="{Binding Client, Mode=TwoWay}"
              BackgroundColor="White"></Entry>
       
       <Label TextColor="{StaticResource FontColor}"
-             Text="Direccion"></Label>
+             Text="Dni"></Label>
       <Editor TextColor="{StaticResource FontColor}"
               HeightRequest="100"
               Text="{Binding Description, Mode=TwoWay}"
               BackgroundColor="White"></Editor>
       
       <Label TextColor="{StaticResource FontColor}"
-             Text="dni"></Label>
+             Text="Numero de Cuenta"></Label>
       <Editor TextColor="{StaticResource FontColor}"
               Text="{Binding DeliveryInformation, Mode=TwoWay}"
               HeightRequest="100"

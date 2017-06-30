@@ -7,10 +7,41 @@
             BindingContext="{Binding Main, Source={StaticResource Locator}}">
 
   <ListView
-    ItemTemplate="{StaticResource CestaItemTemplate}"
-    ItemsSource="{Binding CestaViewModel}"
-    SelectedItem="{Binding objItemSelected, Mode=TwoWay}"
-    HasUnevenRows="True">
+    ItemsSource="{Binding Productos}"
+   SelectedItem="{Binding objItemSelected, Mode=TwoWay}"
+   HasUnevenRows="True">
+    <ListView.ItemTemplate>
+      <DataTemplate>
+        <ViewCell>
+          <Grid Padding="8">
+
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="Auto"></ColumnDefinition>
+              <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Image
+              WidthRequest="50" HeightRequest="50" VerticalOptions="Start"
+              Source="{Binding imguri }">
+            </Image>
+            <StackLayout Grid.Column="1">
+              <Label
+                FontAttributes="Bold"
+                VerticalOptions="Center"
+                TextColor="{StaticResource FontColor}"
+                Text="{Binding nombre}"></Label>
+              <Label
+                VerticalOptions="Center"
+                TextColor="{StaticResource FontColor}"
+                Text="{Binding descripcion}"></Label>
+              <Label
+                VerticalOptions="Center"
+                TextColor="{StaticResource MainColor}"
+                Text="{Binding DeliveryDate, StringFormat='{0:yyyy/MM/dd}'}"></Label>
+            </StackLayout>
+          </Grid>
+        </ViewCell>
+      </DataTemplate>
+    </ListView.ItemTemplate>
   </ListView>
 
   <ContentPage.ToolbarItems>

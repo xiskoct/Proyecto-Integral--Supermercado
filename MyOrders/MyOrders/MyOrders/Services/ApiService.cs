@@ -69,13 +69,13 @@ namespace Supermercado.Services
             }
         }
 
-        /*
-        public async Task<List<Clientes>> CreatePedidos()
+        
+        public async Task<List<Clientes>> getCesta(string idCliente)
         {
             using (var client = new HttpClient())
             {
                 //Convierto en array y serializo
-                var jsonRequest = new { email = user, password = password };
+                var jsonRequest = new { idusuario = "melocomo@melocomo.com" };
 
                 var serializedJsonRequest = JsonConvert.SerializeObject(jsonRequest);
                 
@@ -98,10 +98,8 @@ namespace Supermercado.Services
             }
         }
 
-    */
 
-
-
+ 
 
         public static byte[] convertStringtoByteArray(string userName, string userPassword)
         {

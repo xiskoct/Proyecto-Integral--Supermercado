@@ -81,7 +81,7 @@ namespace Supermercado.ViewModels
             switch (pageName)
             {
 
-                case "CestaPage":
+                case "CestaPages":
                     cestavm = new CestaViewModel();
                     break;
                 case "NewOrderPage":
@@ -122,7 +122,7 @@ namespace Supermercado.ViewModels
 
                 //Limpio datos dinamicos del ObservableCOllection
                 Productos.Clear();
-                //Recorre la lista y llena la ObservableCollection Orders
+                //Recorre la lista y llena la ObservableCollection Productos
                 foreach (var producto in listaproductos)
                 {
                     Productos.Add(new ProductosViewModel()
@@ -130,10 +130,13 @@ namespace Supermercado.ViewModels
                         //Asignas a las ViewModel lo deserializado del JSON a través de los Models
                         nombre = producto.nombre, //ViewModel=Models
                         descripcion = producto.descripcion,
+                        imagen = producto.imagen,
                         precio = producto.precio,
+          
                     });
+                   
                 }
-
+                
 
                 //navigationService.SetMainPage("MainPage");
                 navigationService.SetMainPage("MasterPage");
@@ -169,7 +172,7 @@ namespace Supermercado.ViewModels
             {
                 Icon = "ic_action_alarm",
                 Title = "Cesta",
-                PageName = "CestaPage"
+                PageName = "CestaPages"
             });
 
             Menu.Add(new MenuItemViewModel()

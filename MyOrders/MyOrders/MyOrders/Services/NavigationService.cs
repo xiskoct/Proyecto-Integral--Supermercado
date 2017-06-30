@@ -19,8 +19,8 @@ namespace Supermercado.Services
                     await Navigate(new NewOrderPage());
                     break;
         
-                case "CestaPage":
-                    await Navigate(new CestaPage());
+                case "CestaPages":
+                    await Navigate(new CestaPages());
                     break;
                 case "ClientsPage":
                     await Navigate(new ClientesPage());

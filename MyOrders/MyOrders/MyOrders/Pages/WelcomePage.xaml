@@ -7,6 +7,12 @@
              BindingContext="{Binding Main, Source={StaticResource Locator}}">
   
   <ScrollView>
+    <Image
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Aspect="AspectFill"
+                Source="http://www.intertropico.com/img/supermercado.png" />
+    
   <StackLayout
     VerticalOptions="Center"
     HorizontalOptions="Center"
@@ -14,18 +20,16 @@
     <Label 
       TextColor="White"
       FontSize="20"
-      Text="Bienvenidos a su supermercado online"></Label>
+      Text="Supermercado online"></Label>
     
-    <Label TextColor="{StaticResource FontColor}"
-             Text=""></Label>
-    <Entry TextColor="{StaticResource FontColor}"
-           Text="{Binding user, Mode=TwoWay}"
-           BackgroundColor="White"></Entry>
-    <Label TextColor="{StaticResource FontColor}"
-             Text="Título"></Label>
-    <Entry TextColor="{StaticResource FontColor}"
-           Text="{Binding pass, Mode=TwoWay}"
-           BackgroundColor="White"></Entry>
+     <StackLayout Padding="1,1,1,1" BackgroundColor="{StaticResource entry_border}">
+    <Entry Text="{Binding user, Mode=TwoWay}" Placeholder="Email" Style="{StaticResource MyEntry}"></Entry>
+     </StackLayout>
+    
+       
+      <StackLayout Padding="1,1,1,1" BackgroundColor="{StaticResource entry_border}">
+    <Entry Text="{Binding pass, Mode=TwoWay}" IsPassword="true" Placeholder="Password" Style="{StaticResource MyEntry}"></Entry>
+     </StackLayout>
     
     <Button 
       Command="{Binding StartCommand}"
@@ -33,7 +37,9 @@
       BorderRadius="20"
       BackgroundColor="White"
       TextColor="{StaticResource MainColor}"
-      Text="Iniciar"></Button>
+      Image="supermercado.png"
+      Text="Iniciar">
+  </Button>
   </StackLayout>
   </ScrollView>
 

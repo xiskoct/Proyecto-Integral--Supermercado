@@ -21,7 +21,6 @@ namespace Supermercado.ViewModels
             apiService = new ApiService();
             dialogService = new DialogService();
             DeliveryDate = DateTime.Today;
-            uri();                
         }
         public int idProducto { get; set; }
         public string nombre { get; set; }
@@ -69,29 +68,7 @@ namespace Supermercado.ViewModels
         }
 
         
-      /*
-        private async void Save()
-        {
-            try
-            {
-                await apiService.CreatePedidos(new Productos()
-                { 
-                    idProducto = Guid.NewGuid().ToString(),
-                    nombre = this.Title,
-                    descripcion = this.Client,
-                    precio = this.DeliveryDate,
-                    imagen = this.DeliveryInformation,
-                    categoria = this.Description,
-                });
-  
-                await dialogService.ShowMessage("El pedido ha sido creado.", "Información");
-            }
-            catch 
-	        {
-                await dialogService.ShowMessage("Ha ocuarrido un error inesperado.", "Error");
-            }
-        }
-        
+     
     
     }
 
